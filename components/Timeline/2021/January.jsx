@@ -1,20 +1,40 @@
-import * as React from 'react'
-import { BlogPost } from '../BlogPost'
-import { DateEntry } from '../Entry'
+import { useState } from 'react'
+import Link from 'next/link'
+import { Zap } from 'react-feather'
+import { DateEntry, TimelineEntry, Notes, ButtonSet } from '../Entry'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 export function January() {
+  const [spread, setSpread] = useState('Spread the words !');
+  const onCopy = () => {
+    setSpread('Link Copied !');
+    setTimeout(() => {
+      setSpread('Spread the words !')
+    }, 3000);
+  }
   return (
     <>
       <DateEntry title="January, 2021" />
 
-      <BlogPost
-        image="2020-in-review.jpg"
-        timestamp="January 1, 2021"
-        slug="2020-in-review"
-        title="2020 in review"
-        description="Looking back on 2020 and setting goals for the next year."
-        divider={false}
-      />
+      <TimelineEntry
+        title="Website Published"
+        timestamp="January 5, 2021"
+        tint={'purple'}
+        Icon={Zap}
+      >
+        <>
+          <Notes>
+            <p>
+              New year, new website. Hopefully it continue and keep the good work! Thanks to Brian Lovin to make it happened 🍻
+            </p>
+          </Notes>
+          <ButtonSet>
+            <CopyToClipboard text="https://aldycavalera.com" onCopy={()=> onCopy()}>
+              <a className="cursor-pointer btn">{spread}</a>
+            </CopyToClipboard>
+          </ButtonSet>
+        </>
+      </TimelineEntry>
     </>
   )
 }

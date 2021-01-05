@@ -14,8 +14,7 @@ function Overthought({ data }) {
         <div className="flex flex-col space-y-14">
           <PageHeader
             title="Overthought"
-            subtitle="Thinking out loud about design, development, and building
-              excellent software."
+            subtitle="List of thoughts that comes to my wild mind"
           />
 
           <OverthoughtSubscribeBox />

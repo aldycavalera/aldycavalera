@@ -10,9 +10,8 @@ export default function Home() {
         <div className="flex flex-col space-y-24">
           <div className="flex flex-col space-y-8 md:items-center">
             <PageHeader
-              title="Hey, I’m Brian"
-              subtitle="I’m a product designer, podcaster, and writer, living in San
-                Francisco. I’m currently building native mobile apps at GitHub."
+              title="Hi, I’m Cavalera"
+              subtitle="I’m a software developer, living in Sumedang, Indonesia. Currently build awesome web(s) with PT Sawala Inovasi Indonesia"
             />
 
             <div className="flex flex-col space-y-2 md:space-x-4 md:flex-row md:space-y-0 md:items-center md:justify-center">
@@ -24,12 +23,12 @@ export default function Home() {
                 </a>
               </Link>
               <a
-                href="https://twitter.com/brian_lovin"
+                href="https://facebook.com/cavalera.aldy"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className="w-full text-lg btn btn-large">
-                  Follow me on Twitter
+                  Follow me on Facebook
                 </button>
               </a>
             </div>
