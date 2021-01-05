@@ -1,9 +1,9 @@
-import * as React from 'react'
 import Link from 'next/link'
 import Prism from 'prismjs'
 import htmlParser from 'react-markdown/plugins/html-parser'
 import GlobalStyles from '../GlobalStyles'
 import Markdown from 'react-markdown'
+import { useEffect, Fragment } from 'react'
 
 const parseHtml = htmlParser({
   isValidNode: (node) => node.type !== 'script',
@@ -31,12 +31,12 @@ function LinkRenderer(props) {
 export default function MarkdownRenderer(props) {
   const { children, ...rest } = props
 
-  React.useEffect(() => {
+  useEffect(() => {
     Prism.highlightAll()
   }, [children])
 
   return (
-    <React.Fragment>
+    <Fragment>
       <GlobalStyles.PrismStyles />
       <Markdown
         {...rest}
@@ -48,6 +48,6 @@ export default function MarkdownRenderer(props) {
       >
         {children}
       </Markdown>
-    </React.Fragment>
+    </Fragment>
   )
 }

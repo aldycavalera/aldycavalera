@@ -1,7 +1,6 @@
 import css from '../../styles/modules/navbar.module.scss'
-import NavbarItem from './NavbarItem'
+import HeaderItem from './HeaderItem'
 import { useRouter } from "next/router"
-import { CenteredColumn } from '../../components/Layouts'
 
 const menu = [
   {
@@ -21,7 +20,7 @@ const menu = [
     url: '/thoughts'
   }
 ]
-const Navbar = () => {
+const Header = () => {
   const router = useRouter();
   const currentRoute = router.pathname.split('/')[1]
   return (
@@ -29,8 +28,10 @@ const Navbar = () => {
       <header className={`bg-opacity-60 bg-gray-900 ${css.header}`}>
         <nav>
           {
-            menu.map((item)=> (
-              <NavbarItem active={`/${currentRoute}` === item.url ? true : false} to={item.url}>{item.text}</NavbarItem>
+            menu.map((item, index)=> (
+              <div key={index}>
+                <HeaderItem active={`/${currentRoute}` === item.url ? true : false} to={item.url}>{item.text}</HeaderItem>
+              </div>
             ))
           }
         </nav>
@@ -38,4 +39,4 @@ const Navbar = () => {
     </>
   )
 }
-export default Navbar
+export default Header

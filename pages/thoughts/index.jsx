@@ -26,4 +26,15 @@ function Overthought({ data }) {
   )
 }
 
+export async function getStaticProps() {
+  const res = await fetch(`https://public-api.wordpress.com/rest/v1.1/sites/xxthoughtsapi.wordpress.com/posts`)
+  const data = await res.json()
+  return {
+    // because this data is slightly more dynamic, update it every hour
+    revalidate: 60 * 60,
+    props: {
+      data,
+    },
+  }
+}
 export default Overthought

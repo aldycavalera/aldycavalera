@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import Page from '../../components/Page'
 import designDetailsPosts from '../../data/appDissections'
