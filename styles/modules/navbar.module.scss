@@ -1,0 +1,26 @@
+.header {
+  @apply fixed py-2 px-3 left-0 right-0 top-0 z-50 font-semibold justify-around;
+  &::after {
+    content: '';
+    @apply w-full h-full left-0 top-0 z-0 absolute;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 0px;
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  nav {
+    @apply mx-auto grid space-x-1 justify-center w-full justify-self-center relative;
+    -webkit-box-pack: center;
+    max-width: 968px;
+    grid-template-columns: repeat(6, max-content);
+    z-index: 3;
+    .item {
+      @apply flex flex-grow flex-shrink relative rounded-md justify-center cursor-pointer;
+      flex-basis: 0%;
+      &.active, &:hover {
+        @apply bg-blue-500 bg-opacity-10;
+      }
+      a {
+        @apply px-8 py-2;
+      }
+    }
+  }
+}
