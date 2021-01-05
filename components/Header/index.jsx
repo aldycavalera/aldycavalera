@@ -23,13 +23,14 @@ const menu = [
 ]
 const Navbar = () => {
   const router = useRouter();
+  const currentRoute = router.pathname.split('/')[1]
   return (
     <>
       <header className={`bg-opacity-60 bg-gray-900 ${css.header}`}>
         <nav>
           {
             menu.map((item)=> (
-              <NavbarItem active={router.pathname === item.url ? true : false} to={item.url}>{item.text}</NavbarItem>
+              <NavbarItem active={`/${currentRoute}` === item.url ? true : false} to={item.url}>{item.text}</NavbarItem>
             ))
           }
         </nav>

@@ -1,13 +1,15 @@
 import '../styles/index.scss'
-import Navbar from '../components/Header'
+import Header from '../components/Header'
+import { Footer } from '../components/Footer'
 import '../styles/custom.scss'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Header */}
-      <Navbar></Navbar>
+      <Header></Header>
       <Component {...pageProps} />
+      <Footer></Footer>
     </>
   )
 }
