@@ -124,55 +124,28 @@ export function About({ data, summaries }) {
               <div className="flex flex-col space-y-1">
                 <a
                   className="text-blue-600 dark:text-blue-500"
-                  href="https://github.com/designdetails/designdetails"
+                  href="https://github.com/aldycavalera/s3-upload-files"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  designdetails / designdetails
+                  S3 Upload Files
                 </a>
-                <p>The code that powers Design Details.</p>
+                <p>A simple module to upload your files to Amazon S3</p>
               </div>
 
               <div className="flex flex-col space-y-1">
                 <a
-                  href="https://github.com/brianlovin/brian-lovin-next"
+                  href="https://github.com/sawala-tech/sawala-boilerplate"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 dark:text-blue-500"
                 >
-                  brian-lovin-next
+                  Sawala Boilerplate
                 </a>
-                <p>The code that powers this website you’re looking at.</p>
+                <p>Boilerplates for starting your dream project.</p>
               </div>
-
-              <div className="flex flex-col space-y-1">
-                <a
-                  href="https://github.com/withspectrum/spectrum"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-500"
-                >
-                  withspectrum / spectrum
-                </a>
-                <p>Simple, powerful online communities.</p>
-              </div>
-
-              <div className="flex flex-col space-y-1">
-                <a
-                  href="https://github.com/specfm/spec-next"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-500"
-                >
-                  specfm / spec-next
-                </a>
-                <p>
-                  A podcast network to help designers and developers level up.
-                </p>
-              </div>
-
               <a
-                href="https://github.com/brianlovin"
+                href="https://github.com/aldycavalera"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 dark:text-blue-500"

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { NextSeo } from 'next-seo'
 import Page from '../../components/Page'
-import designDetailsPosts from '../../data/appDissections'
+import designDetailsPosts from '../../data/portfolio'
 import DesignDetailView from '../../components/DesignDetailView'
 import { useRouter } from 'next/router'
 import removeMd from 'remove-markdown'
@@ -23,7 +23,7 @@ export default function DesignDetail({ post }) {
           title={`${post.title} · App Dissection`}
           description={post.description}
           openGraph={{
-            url: `https://brianlovin.com/design-details/${post.slug}`,
+            url: `https://brianlovin.com/portfolio/${post.slug}`,
             title: post.title,
             description: removeMd(post.description),
             site_name: 'App Dissection',

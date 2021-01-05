@@ -25,8 +25,8 @@ export default function DesignDetailsCard(props) {
   } = props
 
   const srcset = [
-    `/static/img/design-details/${slug}.webp`,
-    `/static/img/design-details/${slug}.jpeg`,
+    `/static/img/portfolio/${slug}.webp`,
+    `/static/img/portfolio/${slug}.jpeg`,
   ]
 
   const videosrc = firstDetail.media[0]

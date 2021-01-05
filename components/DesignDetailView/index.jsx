@@ -22,7 +22,7 @@ export default function DesignDetailView(props) {
             height={'64px'}
             layout="fixed"
             className="rounded-xl"
-            src={`/static/img/design-details/${post.slug}.webp`}
+            src={`/static/img/portfolio/${post.slug}.webp`}
             alt={post.title}
           />
           <div className="flex flex-col space-y-2">

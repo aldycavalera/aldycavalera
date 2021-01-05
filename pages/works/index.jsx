@@ -2,7 +2,7 @@ import * as React from 'react'
 import { NextSeo } from 'next-seo'
 import Page, { PageHeader } from '../../components/Page'
 import DesignDetailsGrid from '../../components/DesignDetailsGrid'
-import { summaries } from '../../data/appDissections'
+import { summaries } from '../../data/portfolio'
 import { CenteredColumn } from '../../components/Layouts'
 
 export default function DesignDetails() {
