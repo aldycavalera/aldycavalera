@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Input, Textarea } from '../../Input'
+import { Zap } from 'react-feather'
+import { Input, Textarea } from '../Input'
 import ReCAPTCHA from "react-google-recaptcha";
 
-export default function Feedback({ post }) {
+export default function Recommendations() {
   const [message, setMessage] = useState('')
 
   const [serverState, setServerState] = useState({
@@ -20,7 +21,7 @@ export default function Feedback({ post }) {
     const form = e.target
     setServerState({ submitting: true, submitted: false, error: false })
 
-    fetch('https://formspree.io/f/xleoadyr', {
+    fetch('https://formspree.io/f/xbjpqleq', {
       method: 'POST',
       body: new FormData(form),
       headers: {
@@ -48,44 +49,24 @@ export default function Feedback({ post }) {
   }
 
   return (
-    <div className="flex flex-col p-4 space-y-2 bg-gray-100 rounded-lg dark:bg-gray-900">
-      <h5 className="flex items-center">
-        <span
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            paddingRight: '16px',
-          }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-          </svg>
-        </span>
-        A small favor
-      </h5>
-      <p>
-        Was anything I wrote confusing, outdated, or incorrect? Please let me
-        know! Just write a few words below and I’ll be sure to amend this post
-        with your suggestions.
+    <div className="flex flex-col p-6 mt-8 space-y-3 bg-gray-100 rounded-lg dark:bg-gray-900">
+      <div className="flex items-center">
+        <Zap size={20} className="mr-3 text-gray-900 dark:text-gray-100" />
+        <p className="font-semibold text-gray-900 dark:text-gray-100">
+          Recommendations
+        </p>
+      </div>
+      <p className="font-normal text-gray-900 dark:text-gray-300">
+        My stack is a curated list of tools and software that I use daily. In
+        general, less is more. But I’m always interested in discovering great
+        new apps and tools – let me know what I should check out.
       </p>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 space-y-4">
         <input
           type="hidden"
-          value={`New comment on ${post.title}`}
-          id={post.title}
+          value={`New stack recommendation`}
+          id={'stack'}
           name="_subject"
           readOnly
         />
@@ -96,7 +77,7 @@ export default function Feedback({ post }) {
             value={message}
             id="message"
             name="message"
-            placeholder="What should I know?"
+            placeholder="What should I check out?"
           ></Textarea>
         </label>
 
@@ -107,16 +88,16 @@ export default function Feedback({ post }) {
             <Input
               id="feedback-email"
               name="email"
-              placeholder="(Optional) Email"
+              placeholder="(Optional) Your email"
               type="email"
             />
           </label>
         </div>
         <div className="grid grid-cols-1 gap-3">
-        <ReCAPTCHA
-          sitekey="6LcCaiIaAAAAAB05iow5AHamyN-kZFUHNcQ3CR3v"
-          theme="dark"
-        />
+          <ReCAPTCHA
+            sitekey="6LcCaiIaAAAAAB05iow5AHamyN-kZFUHNcQ3CR3v"
+            theme="dark"
+          />
         </div>
         <div className="flex justify-end">
           <button
@@ -134,7 +115,7 @@ export default function Feedback({ post }) {
             </p>
           ) : (
             <p className="p-3 text-center text-white bg-green-500 rounded">
-              Thanks for taking the time to leave a note!
+              Thanks for the recommendation!
             </p>
           ))}
       </form>

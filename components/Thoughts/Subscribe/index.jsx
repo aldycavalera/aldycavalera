@@ -65,15 +65,6 @@ export default function OverthoughtSubscribeBox() {
       </h5>
       <p>
         If you want to know about new posts, add your email below.
-        Alternatively, you can{' '}
-        <a
-          href="https://overthought.ghost.io/rss/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          subscribe with RSS
-        </a>
-        .
       </p>
       {status === 'succeeded' ? (
         <p className="p-3 text-center text-white bg-green-500 rounded">

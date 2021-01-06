@@ -20,17 +20,17 @@ export default function DesignDetail({ post }) {
     return (
       <Page>
         <NextSeo
-          title={`${post.title} · App Dissection`}
+          title={`${post.title} · Portfolio`}
           description={post.description}
           openGraph={{
-            url: `https://brianlovin.com/portfolio/${post.slug}`,
+            url: `https://aldycavalera.com/portfolio/${post.slug}`,
             title: post.title,
             description: removeMd(post.description),
-            site_name: 'App Dissection',
+            site_name: 'Portfolio',
             images: [
               {
-                url: 'https://brianlovin.com/static/meta/app-dissection.png',
-                alt: 'App Dissection',
+                url: 'https://aldycavalera.com/static/meta/app-dissection.png',
+                alt: 'Portfolio',
               },
             ],
           }}
