@@ -3,7 +3,7 @@ import unified from 'unified'
 import parse from 'rehype-parse'
 import rehype2remark from 'rehype-remark'
 import stringify from 'remark-stringify'
-import Markdown from '../../components/MarkdownRenderer'
+import Markdown from '../../MarkdownRenderer'
 
 export default function Body({ post }) {
   const md = unified()
