@@ -8,7 +8,8 @@ module.exports = withSourceMaps({
     MAILCHIMP_API_KEY: '55fdf82d1a88f64f51d989ea8a514173-us7',
     CONTENTFUL_SPACE_ID: 'g8fljn7062er',
     CONTENTFUL_ACCESS_TOKEN: 'O0IoLgm3bh1-8iQLou87eKc34uSL-qYlqYuNxn1rzb8',
-    LOCAL_API_URL: 'http://localhost:3000',
+    // LOCAL_API_URL: 'http://localhost:3000',
+    LOCAL_API_URL: 'http://aldycavalera.vercel.app',
     DEFAULT_LOCALE: 'id-ID'
   },
   images: {
