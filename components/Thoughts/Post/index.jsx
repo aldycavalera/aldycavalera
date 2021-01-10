@@ -42,7 +42,7 @@ export default function PostView({ post }) {
             translated && (
               <div className="flex flex-row items-center justify-between p-4 text-sm bg-gray-100 rounded-lg dark:bg-gray-900">
                 <p>{locale === 'en-US' ? 'Artikel tersedia dalam Bahasa Indonesia' : 'This article also available in English'}</p>
-                <button className="border-b border-gray-500" 
+                <button className="border-b border-gray-500 dark:text-white" 
                   onClick={()=>{setLocale(locale === 'en-US' ? 'id-ID' : 'en-US')}} >
                 {locale === 'en-US' ? 'Ganti ke Bahasa' : 'Change to English'}</button>
               </div>

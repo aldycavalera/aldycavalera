@@ -13,10 +13,10 @@
     grid-template-columns: repeat(6, max-content);
     z-index: 3;
     .item {
-      @apply flex flex-grow flex-shrink relative rounded-md justify-start lg:justify-center cursor-pointer;
+      @apply flex flex-grow flex-shrink relative rounded-md justify-start lg:justify-center cursor-pointer dark:text-white;
       flex-basis: 0%;
       &.active, &:hover {
-        @apply bg-blue-500 bg-opacity-10 dark:text-blue-600;
+        @apply bg-blue-500 bg-opacity-10 dark:text-blue-300;
       }
       a {
         @apply px-8 py-2;

@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { Input, Textarea } from '../../Input'
+import useDarkMode from 'use-dark-mode'
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Feedback({ post }) {
   const [message, setMessage] = useState('')
+  const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
 
   const [serverState, setServerState] = useState({
     submitting: false,
@@ -115,7 +117,7 @@ export default function Feedback({ post }) {
         <div className="grid grid-cols-1 gap-3">
         <ReCAPTCHA
           sitekey="6LcCaiIaAAAAAB05iow5AHamyN-kZFUHNcQ3CR3v"
-          theme="dark"
+          theme={`${darkMode.value ? 'dark' : 'light'}`}
         />
         </div>
         <div className="flex justify-end">

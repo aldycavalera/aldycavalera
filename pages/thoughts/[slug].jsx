@@ -16,7 +16,7 @@ function OverthoughtPost({ data }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`${process.env.LOCAL_API_URL}/api/thoughts`)
+  const res = await fetch(`${process.env.API_URL}/api/thoughts`)
   const data = await res.json()
 
   if (!data) return { paths: [], fallback: true }
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const res = await fetch(`${process.env.LOCAL_API_URL}/api/thoughts/${slug}`)
+  const res = await fetch(`${process.env.API_URL}/api/thoughts/${slug}`)
   const data = await res.json()
   return {
     // because this data is slightly more dynamic, update it every hour

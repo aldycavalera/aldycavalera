@@ -25,7 +25,7 @@ function Overthought({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.LOCAL_API_URL}/api/thoughts`)
+  const res = await fetch(`${process.env.API_URL}/api/thoughts`)
   const data = await res.json()
   return {
     // because this data is slightly more dynamic, update it every hour

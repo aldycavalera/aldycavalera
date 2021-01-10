@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Input } from '../../Input'
-
 export default function OverthoughtSubscribeBox() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('pending')

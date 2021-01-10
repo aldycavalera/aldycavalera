@@ -6,8 +6,8 @@ export default function OverthoughtList({ posts }) {
   const lang = process.env.DEFAULT_LOCALE
   return (
     <div className="flex flex-col space-y-5">
-      {posts.map((post) => (
-        <div className="flex flex-col space-y-1">
+      {posts.map((post, index) => (
+        <div key={index} className="flex flex-col space-y-1">
           <Link
             href="/thoughts/[slug]"
             as={`/thoughts/${post.fields.slug[lang]}`}
