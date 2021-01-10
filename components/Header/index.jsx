@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`bg-opacity-60 bg-gray-900 transition-all duration-300 pb-12 lg:pb-2 max-h-60 lg:max-h-20 ${css.header}`}>
+      <header className={`bg-opacity-60 bg-gray-200 dark:bg-gray-900 transition-all duration-300 pb-12 lg:pb-2 max-h-60 lg:max-h-20 ${css.header}`}>
         <button onClick={()=> toggleMenu()} className="absolute z-50 flex lg:hidden left-5 top-4">
           <Menu></Menu>
           <span className="ml-3 capitalize">{ currentRoute }</span>

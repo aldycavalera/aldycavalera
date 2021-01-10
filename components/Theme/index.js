@@ -3,7 +3,7 @@ import { COLORS } from './colors'
 const theme = {
   social: {
     facebook: '#1877f2',
-    twitter: '#00ACED',
+    twitter: '#00ACED'
   },
   breakpoints: [
     '1440px', // 0
@@ -13,7 +13,7 @@ const theme = {
     '768px', // 4
     '640px', // 5
     '512px', // 6
-    '420px', // 7
+    '420px' // 7
   ],
   space: [
     '0px', // 0
@@ -25,7 +25,7 @@ const theme = {
     '48px', // 6
     '64px', // 7
     '96px', // 8
-    '128px', // 9
+    '128px' // 9
   ],
   fontSizes: [
     '0.8rem', // 0
@@ -34,24 +34,24 @@ const theme = {
     '1.5rem', // 3
     '1.875rem', // 4
     '2.25rem', // 5
-    '2.75rem', // 6
+    '2.75rem' // 6
   ],
   fonts: {
     body:
       "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-    monospace: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace',
+    monospace: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace'
   },
   fontWeights: {
     body: 400,
     subheading: 500,
     link: 600,
     bold: 700,
-    heading: 800,
+    heading: 800
   },
   lineHeights: {
     body: 1.4,
     heading: 1.2,
-    code: 1.6,
+    code: 1.6
   },
   shadows: {
     default: '0 4px 8px rgba(0,0,0,0.08)',
@@ -59,14 +59,53 @@ const theme = {
     active: '0 6px 20px rgba(0,0,0,0.09)',
     button: '0 2px 4px rgba(0,0,0,0.08)',
     largeHover:
-      '0 4px 4.1px rgba(0, 0, 0, 0.012),0 4.9px 5.8px rgba(0, 0, 0, 0.018),0 6.3px 8.4px rgba(0, 0, 0, 0.029),0 8.8px 12.9px rgba(0, 0, 0, 0.05),0 15px 23px rgba(0, 0, 0, 0.11)',
+      '0 4px 4.1px rgba(0, 0, 0, 0.012),0 4.9px 5.8px rgba(0, 0, 0, 0.018),0 6.3px 8.4px rgba(0, 0, 0, 0.029),0 8.8px 12.9px rgba(0, 0, 0, 0.05),0 15px 23px rgba(0, 0, 0, 0.11)'
   },
   animations: {
     default: '0.35s cubic-bezier(0.165, 0.84, 0.44, 1)',
     hover: '0.35s cubic-bezier(0.165, 0.84, 0.44, 1)',
-    active: '0.35s cubic-bezier(0.165, 0.84, 0.44, 1)',
+    active: '0.35s cubic-bezier(0.165, 0.84, 0.44, 1)'
   },
-  colors: COLORS,
+  colors: COLORS
+}
+
+const light = {
+  bg: {
+    primary: '#eff0f5',
+    secondary: '#ffffff',
+    inset: '#e2e4e8',
+    input: 'rgba(65,67,78,0.12)'
+  },
+  text: {
+    primary: '#050505',
+    secondary: '#2f3037',
+    tertiary: '#525560',
+    quarternary: '#9194a1',
+    placeholder: 'rgba(82,85,96,0.5)',
+    onPrimary: '#ffffff'
+  }
+  // ...
+}
+
+const dark = {
+  bg: {
+    primary: '#050505',
+    secondary: '#111111',
+    inset: '#111111',
+    input: 'rgba(191,193,201,0.12)'
+  },
+  text: {
+    primary: '#fbfbfc',
+    secondary: '#e3e4e8',
+    tertiary: '#a9abb6',
+    quarternary: '#6c6f7e',
+    placeholder: 'rgba(145,148,161,0.5)',
+    onPrimary: '#050505'
+  }
 }
 
 export default theme
+
+const lightTheme = { ...theme, ...light }
+const darkTheme = { ...theme, ...dark }
+export { lightTheme, darkTheme }

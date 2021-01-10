@@ -162,7 +162,7 @@ export function About({ data, summaries }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`https://public-api.wordpress.com/rest/v1.1/sites/xxthoughtsapi.wordpress.com/posts?number=5`)
+  const res = await fetch(`${process.env.LOCAL_API_URL}/api/thoughts`)
   const data = await res.json()
   return {
     // because this data is slightly more dynamic, update it every hour
