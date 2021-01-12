@@ -1,5 +1,11 @@
 import ump21 from './ump21'
-const allPosts = [ump21].reverse()
+import puanindonesia from './puanindonesia'
+import kingsejong from './kingsejong'
+import ainihanifa from './ainihanifa'
+import tndSummit from './tnd-summit'
+import tndDatabase from './tnd-database'
+
+const allPosts = [ainihanifa, kingsejong, puanindonesia, tndDatabase, tndSummit, ump21].sort()
 
 function extractSummary({ title, slug, tint, details }) {
   return {

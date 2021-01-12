@@ -11,12 +11,12 @@ function Stack() {
         title={'Stack'}
         description={'My favorite tools and software.'}
         openGraph={{
-          url: 'https://brianlovin.com/stack',
+          url: 'https://aldycavalera.com/stack',
           title: 'Stack',
           description: 'My favorite tools and software.',
           images: [
             {
-              url: 'https://brianlovin.com/static/meta/stack.png',
+              url: 'https://aldycavalera.com/static/meta/stack.png',
               alt: 'My favorite tools and software.',
             },
           ],
