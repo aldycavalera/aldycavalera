@@ -27,6 +27,7 @@ const send = async (req, res) => {
       method: 'POST'
     }
   ).then((res) => res.json())
+
   if (response.status === 400 && response.title === 'Member Exists') {
     return res.status(400).json({
       error: null

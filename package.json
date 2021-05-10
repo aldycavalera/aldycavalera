@@ -46,7 +46,7 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.1.2",
     "tailwindcss-line-clamp": "^1.0.5"
   }
 }
