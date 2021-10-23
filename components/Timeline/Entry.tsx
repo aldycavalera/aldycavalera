@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-function getTint(color) {
+interface IGetTint {
+  (color: string): void
+}
+
+const getTint:IGetTint = (color) => {
   switch (color) {
     case 'red':
       return 'text-red-800 dark:text-red-200 bg-red-500 bg-opacity-20'
@@ -22,7 +26,7 @@ function getTint(color) {
   }
 }
 
-export function Notes({ children }) {
+export const Notes = ({ children }:any)  => {
   return (
     <div className="-mt-2 prose timeline-inset prose-md text-primary">
       {children}
@@ -30,7 +34,7 @@ export function Notes({ children }) {
   )
 }
 
-export function ButtonSet({ children }) {
+export const ButtonSet = ({ children }:any) => {
   return (
     <div className="flex flex-wrap space-y-3 md:space-y-0 md:space-x-3 timeline-inset ">
       {children}
@@ -45,7 +49,7 @@ export function TimelineEntry({
   Icon,
   tint = 'gray',
   divider = true,
-}) {
+}:any) {
   return (
     <div className="flex mb-12 md:mb-12 timeline-item">
       {/* Icon and dividing line */}
@@ -77,7 +81,7 @@ export function TimelineEntry({
   )
 }
 
-export function DateEntry({ title }) {
+export function DateEntry({ title }:any) {
   return (
     <div className="flex items-center mt-4 mb-8 timeline-item">
       <p className="text-lg font-bold">{title}</p>

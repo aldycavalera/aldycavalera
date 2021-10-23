@@ -2,7 +2,7 @@ import { Coffee } from 'react-feather'
 import { Year2021 } from './2021'
 import { TimelineEntry } from './Entry'
 
-export function Timeline() {
+export const Timeline = () => {
   return (
     <div className="flex flex-col w-full timeline-container">
       <Year2021 />

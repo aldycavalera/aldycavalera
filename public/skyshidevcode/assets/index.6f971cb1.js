@@ -1,0 +1,1 @@
+import{R as o}from"./vendor.b1b55d82.js";const l=({text:t,className:e="3xl",type:r="button",...a})=>o.createElement("button",{className:`px-6 py-3 text-white rounded-lg bg-primary ${e}`,role:"button",type:r,"aria-label":t,...a},t);export{l as D};

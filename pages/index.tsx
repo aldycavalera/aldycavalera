@@ -3,7 +3,7 @@ import { CenteredColumn } from '../components/Layouts'
 import { Timeline } from '../components/Timeline'
 import Link from 'next/link'
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <Page>
       <CenteredColumn>
@@ -40,3 +40,5 @@ export default function Home() {
     </Page>
   )
 }
+
+export default Home
